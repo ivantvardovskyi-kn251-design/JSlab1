@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна робота 1 — Завдання 5</title>
+</head>
+<body>
+  <h3>Лабораторна робота 1 — Завдання 5</h3>
+  <p>Результати виводяться в консоль (F12 → Console)</p>
+  <script>
+    console.log("Завдання 5. Сума та добуток");
+    let n = 7;
+    let sum = 0;
+    for (let i = 2; i <= n; i++) {
+      sum += (Math.pow(i, 3) - 1) / (Math.pow(i, 2) + i + 5);
+    }
+    console.log("y = Σ(i=2..7) (i³ − 1)/(i² + i + 5) =", sum);
+
+    let k = 1;
+    let p = 1;
+    for (let l = k; l <= 9; l++) {
+      p *= (l + 2) / ((l + 4) * (l - 11));
+    }
+    console.log("p = Π(l=1..9) (l + 2)/((l + 4)(l − 11)) =", p);
+  </script>
+</body>
+</html>

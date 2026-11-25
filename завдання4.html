@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна робота 1 — Завдання 4</title>
+</head>
+<body>
+  <h3>Лабораторна робота 1 — Завдання 4</h3>
+  <p>Результати виводяться в консоль (F12 → Console)</p>
+  <script>
+    console.log("Завдання 4. Табулювання функції y = (sin x · cos x) / (x + 3)");
+    console.log("а) табулювання на відрізку [0; 2], крок 0,2:");
+    let a = 0, b = 2, dx = 0.2;
+    for (let x = a; x <= b + 1e-9; x += dx) {
+      let y = (Math.sin(x) * Math.cos(x)) / (x + 3);
+      console.log(`x = ${x.toFixed(3)}, y = ${y.toFixed(5)}`);
+    }
+    console.log("б) 6 значень, починаючи з x0 = 0,5, крок 0,15:");
+    let x0 = 0.5, dx2 = 0.15, n = 6;
+    let x = x0, i = 0;
+    while (i < n) {
+      let y = (Math.sin(x) * Math.cos(x)) / (x + 3);
+      console.log(`x = ${x.toFixed(3)}, y = ${y.toFixed(5)}`);
+      x += dx2;
+      i++;
+    }
+  </script>
+</body>
+</html>
